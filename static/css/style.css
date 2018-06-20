@@ -1,0 +1,258 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+ul {
+    margin-bottom: 0px;
+}
+body {
+    background-color: #f5f5f5;
+}
+header {
+	background-color: #d9e5d7;
+}
+.main-wrapper {
+	width: 80%;
+	margin: 0 auto;
+
+}
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+}
+.logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.nav-menu {
+	display: flex;
+	flex-direction: row;
+}
+.urls {
+	padding: 10px 10px;
+}
+.top-indent {
+    margin: 20px 0;
+}
+
+footer {
+	background-color:#d9e5d7;
+	height: 80px;
+	padding:20px 0;
+}
+.footer-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.icons {
+	margin: 0 10px;
+}
+.icons a {
+	color: black;
+}
+.copyright {
+    text-align: center;
+    font-size: 14px;
+}
+p.copyright {
+    margin-bottom: 0;
+}
+
+/*carousel bootstrap */
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      margin: auto;
+  }
+
+#img-style {
+    height: 500px;
+    width: 90%;
+}
+
+
+/* footer */
+
+
+footer {
+	background-color:#d9e5d7;
+	height: 80px;
+}
+.footer-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.icons {
+	margin: 0px 10px;
+	padding-bottom: 10px;
+}
+.icons a {
+	color: black;
+}
+
+/* paginator */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* gallery */
+
+
+.gallery-title {
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product {
+    margin-bottom: 30px;
+}
+.login_styles {
+    text-align: center;
+}
+.signinclass {
+    margin: 8% 0;
+}
+.form-sign {
+    display: flex;
+    justify-content: center;
+}
+.sign_up {
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.login-or {
+    margin-right:10px;
+}
+.primaryAction {
+    padding:5px 20px;
+    font-size: 1.2em;
+    border:  none;
+    background-color: #f72c03;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+.primaryAction:hover {
+    padding:5px 20px;
+    font-size: 1.2em;
+    border:  none;
+    background-color: #ff9c00;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    transition: all 0.3s linear;
+}
+.img_fb_log {
+    width: 300px;
+    height: 80px;
+}
+.fb-avatar-style {
+    height: 40px;
+}
+.fb-avatar-style-comment {
+    height:50px;
+}
+.main-container {
+    margin: 0 auto;
+    width: 50%;
+    background-color: white;
+}
+.in-main-container {
+    margin: 20px 0;
+}
+.container-center {
+    width: 100%;
+}
+.comment-style-in {
+    border-bottom: 1px solid silver;
+    width:80%;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin: 10px auto;
+}
+textarea.form-control {
+    height:50px;
+    border: 1px solid silver;
+    border-radius: 2px;
+    width:100%;
+}
+
+.comment-styles {
+    margin:10px 0 0 10px;
+}
+.items-form {
+    display:flex;
+    justify-content:center;
+}
+.twoitems {
+    margin: 10px 0 10px 20px;
+}
+
+/* events styles*/
+.events-text-center {
+    text-align:center;
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+}
+.main-event-block {
+    border-top: 1px solid silver;
+}
+.time-style {
+    margin-top: 10px;
+}
+.event-title {
+    margin-left:10px;
+    font-size: 1.8rem;
+    font-weight:bold;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+	<div class="main-wrapper header-container">
+	    <div class="logo"><a href="/">BLOG</a></div>
+	    <nav class="first-nav">
+	        <ul class="nav-menu">
+				{% if not request.user.is_authenticated %}
+	            	<li class="urls"><a href="{% url 'account_login' %}">Вхід</a></li>
+				{% else %}
+					<img class="fb-avatar-style" src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+					<li class="urls"><a href="{% url 'account_logout' %}">Вихід</a></li>
+				{% endif %}
+	            <li class="urls"><a href="{% url 'events' %}">Події</a></li>
+	            <li class="urls"><a href="{% url 'gall'%}">Галерея</a></li>
+	        </ul>
+	    </nav>
+    </div>
+</header><br/>
+</body>
+</html>

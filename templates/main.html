@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+        {% for carusel in carusels %}
+        {% if forloop.counter == 1 %}
+            <div class="item active">
+        {% else %}
+            <div class="item">
+        {% endif %}
+            <img id="img-style" src="{{ carusel.image.url }}" alt="Image" height="300">
+            <div class="carousel-caption">
+            <h3>{{ carusel.name }}</h3>
+            <p>{{ carusel.desc }}</p>
+    </div>
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+    </div>
+
+
+
+{% for new in news %}
+<div class ="top-indent">
+<div class="card text-center" style="width:70%; margin: 0 auto">
+    <img class="card-img-top" src="{{ new.img.url }}" alt="Card image cap" >
+    <div class="card-body">
+        <h5 class="card-title"> {{ new.title }} </h5>
+        <p class="card-text"> {{ new.description }}</p>
+        <p class="card-text"> {{ new.more_description }}</p>
+
+         {% if new.url %}
+            <a href="{% url 'single_book' new.id %}" class="btn btn-primary">Go somewhere</a>
+         {% endif %}
+
+    </div>
+    <div class="card-footer text-muted">
+        <p><b>Created:</b> {{ new.created }} </p>
+        <p><b>Author:</b> {{ new.author }} </p>
+    </div>
+</div>
+</div>
+{% endfor %}
+
+<div class="pagination">
+
+    {% if articles.has_previous %}
+        <a href="?page={{ articles.previous_page_number }}">←</a>
+    {% endif %}
+
+    {% for num in news.paginator.page_range %}
+        {% if num == news.number %}
+            <span class="current"><b>{{ num }}</b></span>
+        {% else %}
+            <a class="href-stle" href="?page={{ num }}"> {{ num }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if article_list.has_next %}
+        <a href="?page={{ article_list.next_page_number }}">→</a>
+    {% endif %}
+
+</div>
+
+{% endblock %}
