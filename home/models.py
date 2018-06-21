@@ -57,6 +57,10 @@ class Comment(models.Model):
     text = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ('-created',)
+
+
 
 class Events(models.Model):
     class Meta:

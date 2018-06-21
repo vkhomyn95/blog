@@ -39,6 +39,16 @@ def book_page(request, book_id):
     comments = Comment.objects.filter(news=news)
     form = BookAddForm(request.POST or None)
     url = 'https://graph.facebook.com/FB_USER_ID/picture'
+    # paginator
+
+    page = request.GET.get('page')
+    paginator = Paginator(comments, 3)
+    try:
+        comments = paginator.page(page)
+    except PageNotAnInteger:
+        comments = paginator.page(1)
+    except EmptyPage:
+        comments = paginator.page(paginator.num_pages)
     added = False
     if request.method == 'POST':
         if form.is_valid():
