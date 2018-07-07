@@ -34,6 +34,7 @@ class Carusel(models.Model):
     image = models.ImageField(upload_to='slider/', null=True, blank=True)
     name = models.CharField(max_length=50, db_index=True)
     desc = models.CharField(max_length=100, db_index=True)
+    id = models.IntegerField(primary_key=True, default=0)
 
     def __str__(self):
         return self.name
@@ -59,7 +60,6 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ('-created',)
-
 
 
 class Events(models.Model):
