@@ -64,10 +64,11 @@ p.copyright {
   }
 
 #img-style {
-    height: 500px;
     width: 90%;
 }
-
+.carousel-indicators .active {
+    width:30px !important;
+}
 
 /* footer */
 

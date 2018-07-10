@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style>
+    .carousel-indicators .active {
+    width:30px;
+    height:5px;
 
+}
+.carousel slide {
+    height:200px;
+}
+.carousel-inner {
+    height:470px;
+}
+</style>
 <div class="container">
    {% if carusels %}
         <div id="carousel-{{ collection.identifier }}" class="carousel slide" data-ride="carousel">
@@ -11,15 +23,17 @@
                     <li data-target="#carousel-{{ collection.identifier }}" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></li>
                 {% endfor %}
             </ol>
-
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 {% for image in carusels %}
                     <div class="item {% if forloop.first %}active{% endif %}">
                         <a href="{{ image.url }}">
-                            <img src="{{ image.image.url }}" alt="{{ image.alt_text }}">
+                            <img src="{{ image.image.url }}" alt="{{ image.alt_text }}" height="300px;" >
                         </a>
-
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>{{ image.name }}.</h3>
+                            <p>{{ image.desc }}</p>
+                      </div>
                     </div>
                 {% endfor %}
             </div>
