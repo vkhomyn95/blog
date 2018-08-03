@@ -43,6 +43,9 @@ class Carusel(models.Model):
 class Photo(models.Model):
     images = models.ImageField(upload_to='photoes/', null=True, blank=True)
 
+    def __str__(self):
+        return  self.images
+
 
 class Gallery(models.Model):
     class Meta:

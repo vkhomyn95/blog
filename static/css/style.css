@@ -236,9 +236,12 @@ textarea.form-control {
 }
 
 /* events styles*/
+.text-style {
+    font-size:18px;
+}
 .events-text-center {
     text-align:center;
-    font-size: 4rem;
+    font-size: 5rem;
     font-family: 'Playfair Display', serif;
 }
 .main-event-block {
@@ -277,4 +280,7 @@ textarea.form-control {
 }
 .href-stle {
     margin: 0 5px;
+}
+.socialaccount_provider facebook {
+    background-image: url("https://miniclipsale.com/wp-content/uploads/2017/02/facebook-login.png");
 }
