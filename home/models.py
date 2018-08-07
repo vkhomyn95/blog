@@ -83,3 +83,4 @@ class Events(models.Model):
     def datepublished(self):
         return self.time.strftime('%B %d %Y')
 
+
